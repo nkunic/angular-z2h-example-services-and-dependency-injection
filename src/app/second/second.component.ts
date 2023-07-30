@@ -12,7 +12,7 @@ export class SecondComponent implements OnInit {
   firstNum = 0;
   secondNum = 0;
   output = 0;
-  previusPageVal = 0;
+  previousPageVal = 0;
 
   constructor(private router: Router) {}
 
@@ -22,7 +22,7 @@ export class SecondComponent implements OnInit {
     // this.output = this.firstNum + this.secondNum;
     let sharedService = new SharedService();
     this.output = sharedService.calculate(this.firstNum, this.secondNum);
-    this.previusPageVal = sharedService.firstPageValue;
+    this.previousPageVal = sharedService.firstPageValue;
   }
 
   previous() {
