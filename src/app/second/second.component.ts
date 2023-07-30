@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../shared.service';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-second',
   templateUrl: './second.component.html',
@@ -12,7 +14,7 @@ export class SecondComponent implements OnInit {
   output = 0;
   previusPageVal = 0;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
@@ -21,5 +23,9 @@ export class SecondComponent implements OnInit {
     let sharedService = new SharedService();
     this.output = sharedService.calculate(this.firstNum, this.secondNum);
     this.previusPageVal = sharedService.firstPageValue;
+  }
+
+  previous() {
+    this.router.navigate(['second']);
   }
 }

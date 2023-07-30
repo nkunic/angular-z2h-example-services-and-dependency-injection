@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../shared.service';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-first',
   templateUrl: './first.component.html',
@@ -11,7 +13,7 @@ export class FirstComponent implements OnInit {
   secondNum = 0;
   output = 0;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
@@ -20,5 +22,9 @@ export class FirstComponent implements OnInit {
     let sharedService = new SharedService();
     this.output = sharedService.calculate(this.firstNum, this.secondNum);
     sharedService.firstPageValue = this.output;
+  }
+
+  next() {
+    this.router.navigate(['first']);
   }
 }
