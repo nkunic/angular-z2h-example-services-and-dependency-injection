@@ -13,15 +13,17 @@ export class FirstComponent implements OnInit {
   secondNum = 0;
   output = 0;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private sharedService: SharedService) {}
 
   ngOnInit() {}
 
   calculate() {
     // this.output = this.firstNum + this.secondNum;
-    let sharedService = new SharedService();
-    this.output = sharedService.calculate(this.firstNum, this.secondNum);
-    sharedService.firstPageValue = this.output;
+    // let sharedService = new SharedService();
+    // this.output = sharedService.calculate(this.firstNum, this.secondNum);
+    // sharedService.firstPageValue = this.output;
+    this.output = this.sharedService.calculate(this.firstNum, this.secondNum);
+    this.sharedService.firstPageValue = this.output;
   }
 
   next() {

@@ -14,15 +14,17 @@ export class SecondComponent implements OnInit {
   output = 0;
   previousPageVal = 0;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private sharedService: SharedService) {}
 
   ngOnInit() {}
 
   calculate() {
     // this.output = this.firstNum + this.secondNum;
-    let sharedService = new SharedService();
-    this.output = sharedService.calculate(this.firstNum, this.secondNum);
-    this.previousPageVal = sharedService.firstPageValue;
+    // let sharedService = new SharedService();
+    // this.output = sharedService.calculate(this.firstNum, this.secondNum);
+    // this.previousPageVal = sharedService.firstPageValue;
+    this.output = this.sharedService.calculate(this.firstNum, this.secondNum);
+    this.previousPageVal = this.sharedService.firstPageValue;
   }
 
   previous() {
