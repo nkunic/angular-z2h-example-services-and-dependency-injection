@@ -8,7 +8,7 @@ export class SharedService {
 
   constructor() {}
 
-  calculate(firstNum, secondNum) {
-    return firstNum + secondNum;
+  calculate(firstNumer, secondNumer) {
+    return firstNumer + secondNumer;
   }
 }
