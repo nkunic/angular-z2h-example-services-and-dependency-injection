@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 
-import { ShapesService } from './shapes.service';
+import { SharedService } from './shared.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [AppComponent, FirstComponent, SecondComponent],
-  providers: [ShapesService],
+  providers: [SharedService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
