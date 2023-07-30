@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-first',
@@ -13,4 +14,11 @@ export class FirstComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  calculate() {
+    //  this.output = this.firstNum + this.secondNum;
+    let sharedService = new SharedService();
+    this.output = sharedService.calculate(this.firstNum, this.secondNum);
+    sharedService.firstPageValue = this.output;
+  }
 }

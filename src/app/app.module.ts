@@ -11,7 +11,7 @@ import { SharedService } from './shared.service';
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [AppComponent, FirstComponent, SecondComponent],
-  providers: [SharedService],
+  // providers: [SharedService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
