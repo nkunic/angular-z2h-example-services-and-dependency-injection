@@ -10,6 +10,8 @@
               type="number"
               class="form-control"
               id="first-number"
+              name="firstNum"
+              [(ngModel)]="firstNum"
               placeholder="First number"
             />
           </div>
@@ -21,15 +23,26 @@
               type="number"
               class="form-control"
               id="second-number"
+              name="secondNum"
+              [(ngModel)]="secondNum"
               placeholder="Second number"
             />
           </div>
         </div>
-        <div class="col-1"><div class="mt-2">=</div></div>
+        <div class="col-1">
+          <div class="mt-2">
+            <span>=</span>
+            <span class="ms-2">
+              {{ output }}
+            </span>
+          </div>
+        </div>
       </div>
 
       <div class="buttons mt-4">
-        <button type="button" class="btn btn-primary">Calculate</button>
+        <button type="button" class="btn btn-primary" (click)="calculate()">
+          Calculate
+        </button>
       </div>
     </form>
   </div>
