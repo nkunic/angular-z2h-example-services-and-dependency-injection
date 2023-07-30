@@ -26,6 +26,6 @@ export class SecondComponent implements OnInit {
   }
 
   previous() {
-    this.router.navigate(['second']);
+    this.router.navigate(['first']);
   }
 }

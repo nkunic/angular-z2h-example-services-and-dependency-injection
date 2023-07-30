@@ -25,6 +25,6 @@ export class FirstComponent implements OnInit {
   }
 
   next() {
-    this.router.navigate(['first']);
+    this.router.navigate(['second']);
   }
 }
