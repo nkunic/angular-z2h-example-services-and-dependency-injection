@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first.component.scss'],
 })
 export class FirstComponent implements OnInit {
+  firstNum = 0;
+  secondNum = 0;
+  output = 0;
+
   constructor() {}
 
   ngOnInit() {}
